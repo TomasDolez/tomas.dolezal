@@ -18,32 +18,39 @@
 </head>
 
 <body>
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+        <source src="images/Meeting.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+</div>
   <section class="countdown-name">
-    <h1>Do team buildingu</h1>
+    <h1>Next <b>PMO status</b> meeting starts at</h1>
   </section>
   <section class="countdown-container">
   
     <div class="days-container">
       <div class="days"></div>
-      <div class="days-label">DNÍ</div>
+      <div class="days-label">DAYS</div>
     </div>
     
     <div class="hours-container">
       <div class="hours"></div>
-      <div class="hours-label">HODIN</div>
+      <div class="hours-label">HOURS</div>
     </div>
     
     <div class="minutes-container">
       <div class="minutes"></div>
-      <div class="minutes-label">MINUT</div>
+      <div class="minutes-label">MINUTES</div>
     </div>
     
     <div class="seconds-container">
       <div class="seconds"></div>
-      <div class="seconds-label">SEKUND</div>
+      <div class="seconds-label">SECONDS</div>
     </div>
     
   </section>
+  <p id="demo"></p>
 
   <script src="./scripts/countdown.js"></script>
 
