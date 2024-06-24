@@ -67,6 +67,7 @@ const countDownClock = () => {
           const secondsLeft = Math.round((then - now) / 1000);
 
           if(secondsLeft <= 0) {
+              console.log(now)
               clearInterval(countdown);
               timer(); // Restart the countdown
               return;
