@@ -44,52 +44,61 @@
 
 const countDownClock = () => {
   
-  const d = document;
-  const daysElement = d.querySelector('.days');
-  const hoursElement = d.querySelector('.hours');
-  const minutesElement = d.querySelector('.minutes');
-  const secondsElement = d.querySelector('.seconds');
-  let countdown;
+    const d = document;
+    const daysElement = d.querySelector('.days');
+    const hoursElement = d.querySelector('.hours');
+    const minutesElement = d.querySelector('.minutes');
+    const secondsElement = d.querySelector('.seconds');
+    let countdown;
 
-  function getNextMondayNoon() {
-      const now = new Date();
-      const dayOfWeek = now.getDay();
-      const daysUntilNextMonday = (8 - dayOfWeek) % 7 || 7; // Number of days until next Monday
-      const nextMonday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + daysUntilNextMonday, 12, 0, 0);
-      return nextMonday.getTime();
-  }
+    function getNextMondayNoon() {
+        const now = new Date();
+        const dayOfWeek = now.getDay();
+        let daysUntilNextMonday;
 
-  function timer() {
-      const then = getNextMondayNoon();
+        if (dayOfWeek === 1 && now.getHours() < 12) {
+            // If it's Monday before 12:00 PM, countdown to today at 12:00 PM
+            daysUntilNextMonday = 0;
+        } else {
+            // Calculate days until next Monday
+            daysUntilNextMonday = (8 - dayOfWeek) % 7 || 7;
+        }
 
-      countdown = setInterval(() => {
-          const now = Date.now();
-          const secondsLeft = Math.round((then - now) / 1000);
+        const nextMonday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + daysUntilNextMonday, 12, 0, 0);
+        return nextMonday.getTime();
+    }
 
-          if(secondsLeft <= 0) {
-              console.log(now)
-              clearInterval(countdown);
-              timer(); // Restart the countdown
-              return;
-          };
+    function timer() {
+        const then = getNextMondayNoon();
 
-          displayTimeLeft(secondsLeft);
+        countdown = setInterval(() => {
+            const now = Date.now();
+            const secondsLeft = Math.round((then - now) / 1000);
 
-      }, 1000);
-  }
+            if(secondsLeft <= 0) {
+                clearInterval(countdown);
+                timer(); // Restart the countdown
+                return;
+            }
 
-  function displayTimeLeft(seconds) {
-      daysElement.textContent = Math.floor(seconds / 86400);
-      hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
-      minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
-      secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
-  }
+            displayTimeLeft(secondsLeft);
 
-  timer();
+        }, 1000);
+    }
+  
+    function displayTimeLeft(seconds) {
+        daysElement.textContent = Math.floor(seconds / 86400);
+        hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+        minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+        secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+    }
+  
+    timer();
 }
 
 /*
-start countdown
-countdown to next Monday 12:00 PM and repeat weekly
+  start countdown
+  countdown to next Monday 12:00 PM and repeat weekly
 */
 countDownClock();
+
