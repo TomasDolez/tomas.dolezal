@@ -1,5 +1,7 @@
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #f2f2f2;
     display: flex;
     flex-direction: column;
@@ -13,19 +15,26 @@ body {
 .container {
     display: none;
     opacity: 0;
-  transition: opacity 1s;;
+    transition: opacity 1s;
 }
+
 .container.active {
     display: block;
     opacity: 1;
-  }
+}
 
 h1 {
+    font-weight: 300;
+    font-style: normal;
     font-size: 3.5em;
     margin-bottom: 120px;
 }
-
+b{
+    font-weight: 500;
+    font-style: normal;
+}
 .countdown {
+    max-width: 10px;
     font-size: 3em;
     display: flex;
     gap: 20px;
