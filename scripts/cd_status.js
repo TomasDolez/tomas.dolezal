@@ -1,5 +1,5 @@
 // const countDownClock = (targetDate) => {
-  
+
 //   const d = document;
 //   const daysElement = d.querySelector('.days');
 //   const hoursElement = d.querySelector('.hours');
@@ -42,13 +42,13 @@
 // countDownClock('2024-06-20T09:00:00');
 
 
-const countDownClock = () => {
-  
+const countDownStatus = () => {
+
     const d = document;
-    const daysElement = d.querySelector('.days');
-    const hoursElement = d.querySelector('.hours');
-    const minutesElement = d.querySelector('.minutes');
-    const secondsElement = d.querySelector('.seconds');
+    const daysElement = d.querySelector('.status_days');
+    const hoursElement = d.querySelector('.status_hours');
+    const minutesElement = d.querySelector('.status_minutes');
+    const secondsElement = d.querySelector('.status_seconds');
     let countdown;
 
     function getNextMondayNoon() {
@@ -75,7 +75,7 @@ const countDownClock = () => {
             const now = Date.now();
             const secondsLeft = Math.round((then - now) / 1000);
 
-            if(secondsLeft <= 0) {
+            if (secondsLeft <= 0) {
                 clearInterval(countdown);
                 timer(); // Restart the countdown
                 return;
@@ -85,14 +85,14 @@ const countDownClock = () => {
 
         }, 1000);
     }
-  
+
     function displayTimeLeft(seconds) {
         daysElement.textContent = Math.floor(seconds / 86400);
         hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
         minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
         secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
     }
-  
+
     timer();
 }
 
@@ -100,5 +100,6 @@ const countDownClock = () => {
   start countdown
   countdown to next Monday 12:00 PM and repeat weekly
 */
-countDownClock();
+countDownStatus();
+
 
