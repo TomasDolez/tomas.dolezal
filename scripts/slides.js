@@ -10,5 +10,5 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}
   x[myIndex-1].classList.add("active");
-  setTimeout(carousel, 27000); // Change image every 27 seconds
+  setTimeout(carousel, 7000); // Change image every 27 seconds
 }

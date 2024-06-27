@@ -23,6 +23,13 @@ body {
     opacity: 1;
 }
 
+.countdown-container{
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 50vh;
+}
+
 h1 {
     font-weight: 300;
     font-style: normal;
@@ -34,7 +41,6 @@ b{
     font-style: normal;
 }
 .countdown {
-    max-width: 10px;
     font-size: 3em;
     display: flex;
     gap: 20px;
@@ -42,6 +48,7 @@ b{
 
 .countdown div {
     padding: 20px 20px;
+    margin: auto;
 }
 
 .unit {
