@@ -1,9 +1,9 @@
-var myIndex = 0;
+let myIndex = 0;
 carousel();
 
 function carousel() {
-  var i;
-  var x = document.getElementsByClassName("container");
+  let i;
+  let x = document.getElementsByClassName("container");
   for (i = 0; i < x.length; i++) {
     x[i].classList.remove("active");
   }
