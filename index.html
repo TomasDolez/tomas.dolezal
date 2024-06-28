@@ -21,10 +21,11 @@
 </head>
 
 <body>
+    <!-- STATUS -->
     <div class="container">
         <div class="video-background">
             <video autoplay muted loop id="background-video">
-                <source src="images/Meeting.mp4" type="video/mp4">
+                <source src="images/Status.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
         </div>
@@ -52,10 +53,11 @@
             </div>
         </div>
     </div>
+    <!-- ALIGNMENT -->
     <div class="container">
         <div class="video-background">
             <video autoplay muted loop id="background-video">
-                <source src="images/Meeting.mp4" type="video/mp4">
+                <source src="images/Alignment.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
         </div>
@@ -82,7 +84,37 @@
             </div>
         </div>
     </div>
-
+    <!-- LUNCH -->
+    <div class="container">
+      <div class="video-background">
+          <video autoplay muted loop id="background-video">
+              <source src="images/Lunch.mp4" type="video/mp4">
+          </video>
+          <div class="overlay"></div>
+      </div>
+      <div class="countdown-container">
+          <h1>The feast starts in</h1>
+          <div class="countdown">
+              <div>
+                  <span class="lunch_days"></span>
+                  <div class="unit">Days</div>
+              </div>
+              <div>
+                  <span class="lunch_hours"></span>
+                  <div class="unit">Hours</div>
+              </div>
+              <div>
+                  <span class="lunch_minutes"></span>
+                  <div class="unit">Minutes</div>
+              </div>
+              <div>
+                  <span class="lunch_seconds"></span>
+                  <div class="unit">Seconds</div>
+              </div>
+              <script src="./scripts/cd_lunch.js"></script>
+          </div>
+      </div>
+  </div>
 
     <script src="./scripts/slides.js"></script>
 </body>
