@@ -1,4 +1,4 @@
-const countDownPoland = (targetDate) => {
+const countDownVacation = (targetDate) => {
 
     const d = document;
     const daysElement = d.querySelector('.vc_days');
@@ -39,4 +39,4 @@ start countdown
 enter target date in the format 'YYYY-MM-DDTHH:MM:SS'
 for example '2024-12-31T23:59:59'
 */
-countDownPoland('2024-07-17T06:00:00');
+countDownVacation('2024-07-17T06:00:00');
