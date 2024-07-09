@@ -74,6 +74,10 @@ b{
     /* Cover the entire background */
 }
 
+.vacation {
+    height: 120%;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -85,6 +89,7 @@ b{
     z-index: 1;
     /* Ensure the overlay is above the video but behind the content */
 }
+
 
 
 
