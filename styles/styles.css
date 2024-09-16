@@ -33,7 +33,7 @@ body {
 h1 {
     font-weight: 300;
     font-style: normal;
-    font-size: 4em;
+    font-size: 6em;
     margin-bottom: 120px;
 }
 b{
@@ -41,7 +41,7 @@ b{
     font-style: normal;
 }
 .countdown {
-    font-size: 3em;
+    font-size: 5em;
     display: flex;
     gap: 20px;
 }
@@ -67,11 +67,20 @@ b{
     /* Ensure the video is behind the content */
 }
 
+.img-background {
+    background-image: url("https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2023/06-june/blog-grilling-l.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #background-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Cover the entire background */
 }
 
 .overlay {

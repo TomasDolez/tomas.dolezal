@@ -22,17 +22,47 @@
 
 <body>
     <!-- <iframe src="https://sport.ceskatelevize.cz/clanek/olympijske-hry/pariz-2024/pariz-zive-6-den-soutezi/66ab1ac861d8d47534bcc4cf#live" width="1920" height="1080"></iframe> -->
-
     <div class="container">
         <div class="video-background">
             <video autoplay muted loop id="background-video">
-                <source src="images/Status.mp4" type="video/mp4">
+                <source src="images/Christmas.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
         </div>
         <div class="countdown-container">
+            <h1>Christmas with <br>🎅 Michael 🎅</h1>
+            <div class="countdown">
+                <div>
+                    <span class="christmas_days"></span>
+                    <div class="unit">Days</div>
+                </div>
+                <div>
+                    <span class="christmas_hours"></span>
+                    <div class="unit">Hours</div>
+                </div>
+                <div>
+                    <span class="christmas_minutes"></span>
+                    <div class="unit">Minutes</div>
+                </div>
+                <div>
+                    <span class="christmas_seconds"></span>
+                    <div class="unit">Seconds</div>
+                </div>
+                <script src="./scripts/cd_christmas.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- STATUS -->
+    <div class="container">
+        <div class="video-background">
+            <div class="img-background">
+                <img id="background-image"src="images/grill-party.png">
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="countdown-container">
 
-            <h1>Next <b>PMO Status</b> Meeting</h1>
+            <h1>Next <b>Grill your PM</b> (Status Meeting)</h1>
             <div class="countdown">
                 <div>
                     <span class="status_days"></span>
