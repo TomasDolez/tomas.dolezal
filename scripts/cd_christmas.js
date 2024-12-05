@@ -39,4 +39,4 @@ start countdown
 enter target date in the format 'YYYY-MM-DDTHH:MM:SS'
 for example '2024-12-31T23:59:59'
 */
-countDownChristmas('2024-12-24T00:00:00');  // Countdown set to end on 24th December 2024 at midnight
+countDownChristmas('2024-12-19T16:30:00');  // Countdown set to end on 24th December 2024 at midnight
